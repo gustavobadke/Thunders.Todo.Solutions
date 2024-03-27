@@ -1,0 +1,31 @@
+@Thunders.Todo.Api_HostAddress = http://localhost:5111
+
+GET {{Thunders.Todo.Api_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+POST {{Thunders.Todo.Api_HostAddress}}/todos 
+Content-Type: application/json
+
+{
+  "id": 2,
+  "text": "Items1",
+  "deadlineDateISOFormat": "2024-03-26T21:13:04.822Z"
+}
+
+###
+
+PUT {{Thunders.Todo.Api_HostAddress}}/todos 
+Content-Type: application/json
+
+{
+  "id": 1,
+  "text": "Items1 **",
+  "deadlineDateISOFormat": "2024-03-26T21:13:04.822Z",
+  "isDone": true
+}
+
+###
+
+DELETE {{Thunders.Todo.Api_HostAddress}}/todos/2
